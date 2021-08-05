@@ -50,4 +50,28 @@ public class SmallestIntGreaterN {
 //        }
 //        return sum;
 //    }
+    
+    
+    
+// another Job task      
+//        int K = 2;
+//        int[] A = new int[]{1, 1, 3};
+//        
+//        int n = A.length;
+//        for (int i = 0; i < n-1; i++) {
+//            if (A[i]+1 <= A[i+1]) {
+//                System.out.println("false");
+//            }
+//        }
+//        if (A[0] != 1 && A[n - 1] != K) {
+//            System.out.println("false");
+//        } else {
+//            System.out.println("true");
+//        }
+//another job task
+//       Set<Integer> uniqueCandies = new LinkedHashSet<Integer>();
+//for(int value : A) {
+//    uniqueCandies.add(value);
+//}    
+    
 }

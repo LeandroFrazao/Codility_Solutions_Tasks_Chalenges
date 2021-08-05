@@ -29,12 +29,13 @@ public class Main {
         //  TCyclicRotation.test();
 
         Lesson2OddOcurrencyInArray TOddOcurrency = new Lesson2OddOcurrencyInArray();
-        //  TOddOcurrency.test();
+          TOddOcurrency.test();
 
-        SmallestIntGreaterN smallestIntGreaterN = new SmallestIntGreaterN();
-        smallestIntGreaterN.test();
+        // job task
+       // SmallestIntGreaterN smallestIntGreaterN = new SmallestIntGreaterN();
+       // smallestIntGreaterN.test();
         
-        Challenge_2018_10_Krypton2018 C2018Krypton = new Challenge_2018_10_Krypton2018();
+// Challenge_2018_10_Krypton2018 C2018Krypton = new Challenge_2018_10_Krypton2018();
 //        int[][] A = new int[][]{{1, 2, 3}, {10, 1,1 }, {1, 1, 20}};
 //        System.out.println(C2018Krypton.solution(A));
     }

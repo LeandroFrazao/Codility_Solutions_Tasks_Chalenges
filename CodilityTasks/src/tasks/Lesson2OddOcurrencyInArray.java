@@ -6,13 +6,9 @@
 package tasks;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -22,60 +18,63 @@ import java.util.Set;
 public class Lesson2OddOcurrencyInArray {
 
     public void test() {
-        Integer[] array = new Integer[]{1, 2, 3, 4, 5, 6, 7, 6, 4, 3, 1, 2, 5};
+        int[] array = new int[]{1,5,1};
         solution(array);
     }
 
-    public Integer[] solution(Integer[] T) {
-      //  Map<Integer, int[]> map = new HashMap<>();
-      
-      
-      
-      
-      
-//        int K = 2;
-//        int[] A = new int[]{1, 1, 3};
-//        
-//        int n = A.length;
-//        for (int i = 0; i < n-1; i++) {
-//            if (A[i]+1 <= A[i+1]) {
-//                System.out.println("false");
-//            }
-//        }
-//        if (A[0] != 1 && A[n - 1] != K) {
-//            System.out.println("false");
-//        } else {
-//            System.out.println("true");
-//        }
-//       Set<Integer> uniqueCandies = new LinkedHashSet<Integer>();
-//for(int value : A) {
-//    uniqueCandies.add(value);
-//}
-//for(Integer x : setUniqueNumbers) {
-//    System.out.println(x);
-//}
+    public int solution(int[] A) {
+        //ArrayList<Integer> arrayL = new ArrayList<>(A.length);
 
-//        int[] pos = new int[2];
-//        LinkedList<Integer> tempList = new LinkedList<>();
-//         Collections.addAll(tempList,A);
+        HashSet<Integer> setList = new HashSet<>();
+       
+        int oddNumber = 0;
+      
+        for (int value : A) {
+            if (!setList.add(value)){
+                setList.remove(value);
+            }
+        }
+        for (int value:setList){
+            oddNumber = value;
+        }
+
+// another solution;
+//              int elem = 0;
+//		for (int i = 0; i < A.length; i++) {
+//			elem ^= A[i];
+//		}
 //        
-//        pos[0]=1;
-//        pos[1]=2;
-//        for (int i=0; i<=A.length-1; i++){
-//            for (int j=i+1;j<=tempList.size()-1;j++){
-//                if (A[i]==tempList.get(j)){
-//                    map.put(A[i], new int[]{i,j});
-//                    tempList.remove(j);
+
+//  only 55% on codility        
+//Collections.sort(arrayL);
+//        int oddNumber = 0;
+//        if (arrayL.size() == 1) {
+//            return arrayL.get(0);
+//        }
+//        int i = 0;
+//        while (i < arrayL.size()) {
+//            if (i + 1 == arrayL.size()) {
+//                oddNumber = arrayL.get(i);
+//                break;
+//            }
+//            if (arrayL.get(i) != arrayL.get(i + 1)) {
+//                oddNumber = arrayL.get(i);
+//                break;
+//            }
+//            i += 2;
+//        }
+
+//        while (i < arrayL.size()) {
+//            for (int j = i + 1; j <= arrayL.size() - 1; j++) {
+//                if (arrayL.get(i) == arrayL.get(j)) {
+//                    arrayL.remove(j);
+//                    arrayL.remove(i);
+//                    i = -1;
 //                    break;
 //                }
 //            }
-//        }   
-        //  map.put(1, pos);
-//        for (int key : map.keySet()) {
-//            System.out.print("key " + key);
-//            System.out.println("   Value " + map.get(key));
+//            i++;
 //        }
-
-        return T;
+        return oddNumber;
     }
 }
